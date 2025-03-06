@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vídeo Interativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Vídeo Interativo</h1>
+    </header>
+    <main>
+        <div class="video-container">
+            <video id="main-video">
+                <source src="./videos/video1.webm" type="video/webm">
+                Seu navegador não suporta a reprodução de vídeos.
+            </video>
+            <div id="marker-display">Marcador atual: 0</div>
+            <div class="controls">
+                <button id="prev-button">Anterior</button>
+                <button id="play-pause-button">Play/Pause</button>
+                <button id="next-button">Próximo</button>
+                <button id="fullscreen-button">Tela Cheia</button> <!-- Botão de tela cheia -->
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Controle de Vídeo Interativo - By GUS-MO</p>
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html"><p>License: GPL-3.0</p></a>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

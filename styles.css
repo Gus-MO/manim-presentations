@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.video-container {
+    width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+.controls button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.1s;
+}
+
+.progress-container:hover #progress-bar {
+    background-color: #0056b3;
+}
+
+#marker-display {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo para o vídeo em tela cheia */
+:fullscreen .video-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 0;
+}
+
+:fullscreen video {
+    border-radius: 0;
+}
+
+:fullscreen header,
+:fullscreen footer {
+    display: none; /* Oculta o header e o footer em tela cheia */
+}
+
+/* Estilo para o botão de tela cheia */
+#fullscreen-button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#fullscreen-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .video-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .controls button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    video {
+        border-radius: 0;
+    }
+}
